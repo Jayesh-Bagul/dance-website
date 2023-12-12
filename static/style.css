@@ -1,0 +1,296 @@
+@import url('https://fonts.googleapis.com/css2?family=Acme&family=Beau+Rivage&family=Caveat:wght@700&family=Montserrat:wght@500&family=Nunito+Sans:opsz@6..12&family=Plus+Jakarta+Sans&family=Roboto:wght@100&family=Smooch&family=Ubuntu:wght@300&family=Work+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Acme&family=Asap+Condensed&family=Beau+Rivage&family=Caveat:wght@700&family=Montserrat:wght@500&family=Nunito+Sans:opsz@6..12&family=Plus+Jakarta+Sans&family=Roboto:wght@100&family=Smooch&family=Ubuntu:wght@300&family=Work+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Acme&family=Asap+Condensed&family=Beau+Rivage&family=Caveat:wght@700&family=Hedvig+Letters+Serif:opsz@12..24&family=Montserrat:wght@500&family=Nunito+Sans:opsz@6..12&family=Plus+Jakarta+Sans&family=Roboto:wght@100&family=Smooch&family=Ubuntu:wght@300&family=Work+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Acme&family=Asap+Condensed&family=Beau+Rivage&family=Caveat:wght@700&family=Hedvig+Letters+Serif:opsz@12..24&family=Montserrat:wght@500&family=Nunito+Sans:opsz@6..12&family=Plus+Jakarta+Sans&family=Roboto:wght@100&family=Smooch&family=Ubuntu:wght@300&family=Whisper&family=Work+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Acme&family=Asap+Condensed&family=Beau+Rivage&family=Caveat:wght@700&family=Hedvig+Letters+Serif:opsz@12..24&family=Montserrat:wght@500&family=Nova+Square&family=Nunito+Sans:opsz@6..12&family=Plus+Jakarta+Sans&family=Roboto:wght@100&family=Smooch&family=Ubuntu:wght@300&family=Whisper&family=Work+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Acme&family=Asap+Condensed&family=Beau+Rivage&family=Caveat:wght@700&family=Hedvig+Letters+Serif:opsz@12..24&family=Montserrat:wght@500&family=Nova+Square&family=Nunito+Sans:opsz@6..12&family=Playfair+Display&family=Plus+Jakarta+Sans&family=Roboto:wght@100&family=Smooch&family=Ubuntu:wght@300&family=Whisper&family=Work+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Acme&family=Asap+Condensed&family=Beau+Rivage&family=Caveat:wght@700&family=Hedvig+Letters+Serif:opsz@12..24&family=Montserrat:wght@500&family=Noto+Serif&family=Nova+Square&family=Nunito+Sans:opsz@6..12&family=Playfair+Display&family=Plus+Jakarta+Sans&family=Roboto:wght@100&family=Smooch&family=Ubuntu:wght@300&family=Whisper&family=Work+Sans&display=swap');
+*{
+    /* this is CSS reset:see more info at the end. */
+    /* we remove unnecessary gaps and padding margin */
+    margin: 0;
+    padding:0; 
+    box-sizing: border-box;/*see more info at the end. */
+    /* font-family: 'Montserrat', sans-serif; */
+    /* font-family: 'Hedvig Letters Serif', serif; */
+    /* font-family: 'Whisper', cursive; */
+    /* font-family: 'Nova Square', sans-serif; */
+    /* font-family: 'Playfair Display', serif; */
+    font-family: 'Noto Serif', serif;
+
+}
+
+#navbar {
+
+background-color: black;
+padding: 13px 14px;
+}
+
+#navbar li{
+    list-style: none;
+    margin-top: 10px;
+}
+
+#navbar ul{
+    display: flex;
+    justify-content: center;
+}
+
+#logo{
+    display: flex;
+    color: white;
+margin-right: 20px;
+font-size: 13px;
+align-items: center;
+flex-direction: column;
+/* justify-content: center; */
+}
+
+#logo img{
+
+    height: 36px;
+    width: 50px;
+    filter: invert(1);
+}
+
+
+#navbar li a {
+    text-decoration: none;
+    padding: 13px 6px;
+    color: white;
+    margin: 5px 10px;
+    font-size: 20px;
+  
+}
+#navbar li a:hover {
+    color: rgb(226 193 246);
+    font-size: 21px;
+}
+
+#introSection{
+    /* see background vs background image in the end */
+background: center/cover no-repeat url("/static/bg5.jpg") ;
+    height: 646px;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+#parawel{
+    font-size: 70px;
+    position: relative;
+    bottom: -99px;
+    color: white;
+    font-weight: bold;
+    font-family: 'Asap Condensed', sans-serif;
+}
+
+
+ 
+
+#paraeat {
+    font-size: 38px;
+    position: relative;
+    bottom: -99px;
+    color: #e9abff;
+    font-weight: bold;
+    font-family: 'Asap Condensed', sans-serif;
+}
+
+
+#sponsorsSection::before{
+/* this is used because you want the background of your sponsors section to be behind your other sponsor logos and you don't want them to become opaque.*/
+    content: "";
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+    top: 0px;
+    background: url("/static/sponback.jpg") ;
+position: absolute;
+background-repeat: no-repeat;
+background-size: cover; 
+opacity: 0.8 ;
+
+}
+
+#sponsorsSection{
+/* background-color: rgb(111, 81, 125); */
+height: 800px;
+position: relative;
+}
+
+#sponsors{
+    height: 412px;
+    display: flex;
+    /* border: 2px solid blue; */
+    /* background-color: black; */
+    margin: auto;
+    margin-top: 95px;
+    justify-content: center;
+}
+
+
+#sponsorsSection h1{
+    text-align: center;
+    padding: 50px;
+    font-size: 43px;
+
+}
+
+#sp1, #sp2, #sp3, #sp4{
+
+    margin: 20px;
+    /* border: 2px solid red; */
+}
+
+#sp1{
+    background: center/cover no-repeat url("/static/apple.jpg") ;
+    height: 348px;
+    width: 311px;
+background-size: 250%;
+}
+
+#sp2{
+    background: center/cover no-repeat url("/static/openAi.jpg") ;
+    height: 348px;
+    width: 311px;
+    background-size: 250%;
+
+
+}
+
+#sp3{
+    background: center/cover no-repeat url("/static/lambo.jpg") ;
+    height: 348px;
+    width: 311px;
+    background-size: 162%;
+    /* background size to zoom in or out image but to keep inside the div only */
+}
+
+#sp4{
+    background: center/cover no-repeat url("/static/bmw.jpg") ;
+    height: 348px;
+    width: 311px;
+    background-size: 348px 349px;
+
+}
+
+#missionSection{
+    background-color: rgb(110, 125, 81);
+    height: 800px;
+    background: center/cover no-repeat url("/static/bgm2.jpg") ;
+    }
+    
+ #missionSection h1{
+        text-align: center;
+        padding: 20px;
+        color: white;
+        font-size: 43px;
+    }
+
+    .cards{
+
+        border: 5px solid rgb(0, 0, 0);
+        border-radius: 14px;  
+        display: inline-block;
+        width: 30%;
+        margin: 25px;
+        height: 411px;
+        background-color: rgb(255, 255, 255);
+
+    }
+
+    .cards h3{
+
+        text-align: center;
+        padding: 10px;
+        font-size: 23px;
+    }
+
+    .cards p{
+        padding: 35px;
+        padding-top: 5px;
+        margin-top: 20px;
+        text-align: justify;
+        color: rgb(0, 0, 0);
+        font-size: 18px;
+        font-weight: bold;
+    }
+
+   
+    
+   
+#footer{
+background-color: black;
+display: flex;
+justify-content: center;
+align-items: center;
+color: white;
+height: 35px;
+}
+
+
+
+
+
+/* CSS RESET */
+/* A CSS reset is a technique used to reset or neutralize the default browser styling of HTML elements. When web browsers render HTML elements, they come with their own default styles, margins, paddings, and other properties applied to various elements. These default styles can differ between browsers, leading to inconsistent appearance of elements across different browsers.
+The purpose of a CSS reset is to establish a consistent baseline by removing or resetting these default styles. One popular method of achieving this is by using the `* {}` selector in CSS. The `*` selector targets all elements on the page, and setting properties for `*` allows you to remove margins, paddings, and other default styles applied by browsers.
+For instance:
+```css
+* {
+    margin: 0;
+    padding: 0;
+    /* Other properties reset to desired defaults */
+/* }
+```
+
+This snippet sets margins and paddings to zero for all elements, effectively resetting these properties to a consistent starting point across different browsers.
+However, it's important to note that CSS resets can have unintended consequences and might require redefining styles for every element on the page. Some developers prefer using a CSS normalize or a CSS framework like Bootstrap or Normalize.css, which aim to normalize styles rather than completely reset them. Normalize.css, for example, retains some default browser styles but ensures consistent styles across different browsers by providing a consistent baseline.
+Using a CSS reset or normalize allows developers to start styling from a consistent base, reducing inconsistencies and making it easier to create designs that look similar across various browsers. */ 
+
+
+
+
+
+/* BOX-SIZING */
+/* `box-sizing: border-box;` is a CSS property that alters the way the size of an element is calculated in a web page layout.
+
+- **`box-sizing`**: Defines how the size of an element is calculated, especially concerning its width and height.
+- **`border-box`**: When set to `border-box`, it includes the element's border and padding within its defined width and height. In other words, the total width and height of the element are calculated by considering the specified width and height values, along with any padding and borders applied to the element. This ensures that if you set a specific width or height for an element, the padding and borders won't increase the overall size beyond those dimensions.
+
+This property can be quite useful when designing layouts because it allows you to more precisely control the dimensions of elements without worrying about the additional space taken up by borders and padding. It helps in creating consistent and predictable layouts across different elements on a web page. */
+
+
+
+
+
+
+/*BACKGROUND vs BACKGROUND IMAGE */
+/* In CSS, `background` and `background-image` are related properties used to style the background of an element, but they serve different purposes:
+
+- **`background`**: The `background` property is a shorthand property that allows you to set multiple background-related properties at once, such as `background-color`, `background-image`, `background-repeat`, `background-position`, and more. It's used to specify various background properties in a single declaration.
+
+    For example:
+    ```css
+    .example {
+        background: #f1f1f1 url('image.jpg') no-repeat center center;
+    }
+    ```
+
+    Here, `background` sets the background color to `#f1f1f1`, applies the `image.jpg` as the background image, sets no-repeat as the background repeat, and centers the background image horizontally and vertically.
+
+- **`background-image`**: On the other hand, `background-image` is a specific property used to set only the background image for an element. Unlike `background`, `background-image` only handles the image aspect of the background and doesn't include other background-related properties like color, positioning, or repetition.
+
+    For example:
+    ```css
+    .example {
+        background-image: url('image.jpg');
+    }
+    ```
+
+    Here, `background-image` sets the background of the element to the image specified (`image.jpg`) without defining other background properties like color or repetition.
+
+In summary, `background` is a shorthand property that covers various background-related properties, including `background-image`, while `background-image` specifically deals with setting the image used as the background of an element, excluding other background-related settings. */

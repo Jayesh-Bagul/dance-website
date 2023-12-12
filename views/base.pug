@@ -1,0 +1,24 @@
+//- Somethings are going to be common in your website like navbar, footer etc hence we are creating this template here so that we can use it later.
+
+doctype html
+html
+  head
+    title Our Dance Academy
+    block scripts
+    block style
+  body
+    nav#navbar 
+        ul 
+            div#logo
+              img(src="/static/logo1.jpg", alt="", srcset="")
+              | ODA  
+            li #[a(href="/") Home ]
+            li #[a(href="/about") About]
+            li #[a(href="/services") Services] 
+            li #[a(href="/classinfo") Class Info ]
+            li #[a(href="/contacts") Contact Us]
+   
+    block content
+    footer#footer
+      | Copyright © 2020 OurDanceAcademy.com | All rights reserved
+      

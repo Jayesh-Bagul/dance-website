@@ -1,0 +1,43 @@
+extends base.pug
+//- extends base.pug means that we are filling the file base.pug by writing content inside home.pug
+//- wherever base scripts is written inside base.pug in that file script(src='/static/index.js.js') will be go..
+//- Somethings are going to be common in your website like navbar, footer etc hence we are creating this template here so that we can use it later.Hence just write the unique things here and write all the repeating stuff that you are gonna use in every website inside base.pug. Hence we have shifted the code of navbar and footer in base.pug
+block scripts
+    script(src='/static/index.js.js')
+
+block style 
+    style
+      include ../static/style.css
+
+block content 
+    
+    section#introSection 
+        div#parawel Welcome to Our Dance Academy
+        div#paraeat Eat Sleep Dance Repeat
+
+    section#missionSection 
+        h1 Our Mission 
+
+        div.cards#card1
+          h3 Dance Perfection 
+          p Lorem, ipsum dolor sit amet consectetur adipisicing elit. Cumque harum tenetur porro, sed amet obcaecati iste commodi odit ad quisquam consectetur, minima ipsum quibusdam maiores et dolorem quod, laboriosam rerum. Eveniet eos minus odit esse veritatis, natus omnis odio officiis pariatur nemo earum eligendi ea excepturi? Laudantium nihil atque in.
+
+        div.cards#card2
+          h3 Dance the way you like 
+          p Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nostrum nam adipisci quod voluptate laborum, sint iste autem nisi expedita, libero quis possimus dolore nihil esse, voluptates dicta architecto porro aspernatur facilis dolores quae a illo. Iusto quis animi necessitatibus quibusdam adipisci, obcaecati hic, facere consequatur suscipit cum nulla quod numquam.        
+          
+        div.cards#card3
+          h3 Expert Teaching 
+          p Lorem ipsum dolor, sit amet consectetur adipisicing elit. In alias ratione sunt officia culpa earum! Consequuntur vel commodi adipisci harum maiores modi minima quisquam quos facilis magni accusamus recusandae in unde perspiciatis incidunt placeat, earum esse. Eaque consequatur incidunt iure hic! Dolores, quae. Impedit soluta, dicta earum ipsum modi sit!
+
+    section#sponsorsSection 
+        h1 Our Sponsers    
+        
+        div#sponsors
+          div#sp1
+
+          div#sp2
+
+          div#sp3
+
+          div#sp4         
